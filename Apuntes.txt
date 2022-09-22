@@ -1,0 +1,5 @@
+Variables no tienen formato, puede ser un int y cambiarse a string (por ejemplo)
+elif hace que si entra en un if anterior o else if anterior se salta el resto
+else para cuando no es ninguna otra condicion
+len(variable) para contar el numero de caracteres de un string
+random.randint(n1,n2) para generar un numero aleatorio entre ese rango
