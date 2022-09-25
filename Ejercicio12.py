@@ -1,6 +1,6 @@
 cuenta = {
     "titular":"", 
-    "cantidad":"",
+    "cantidad":0,
 }
 
 while cuenta["titular"] == "":
@@ -14,8 +14,13 @@ print("Escriba la cantidad que desea Ingresar: ")
 cuenta["cantidad"] = int(input())
 datos = input("¿Que operacion desea realizar?\n 1-Ingresar Dinero\n 2-Extraer Dinero\n")
 if datos == "1":
-    cuenta["cantidad"] = cuenta.get("cantidad") + int(input(("Escriba la cantidad que desea Ingresar: ")))
+    cuenta["cantidad"] = cuenta["cantidad"] + int(input(("Escriba la cantidad que desea Ingresar: ")))
     print(cuenta["cantidad"])
-else:
-    print(cuenta["titular"])
+elif datos == "2":
+    cuenta["cantidad"] = cuenta["cantidad"] - int(input(("Escriba la cantidad que desea Retirar: ")))
+    if cuenta["cantidad"] > 0:
+        print(cuenta["cantidad"])
+    if cuenta["cantidad"] <= 0:
+         cuenta["cantidad"] = 0
+         print(cuenta["cantidad"])
     
